@@ -1,0 +1,290 @@
+20190808 10:01:00 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 10:01:10 Correcto: Usuario: 1 Consulto Areas
+20190808 10:05:22 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 10:05:27 Correcto: Usuario: 1 Consulto Areas
+20190808 10:41:38 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 10:42:54 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 10:43:07 Correcto: Usuario: 1 Consulto Areas
+20190808 10:44:15 Correcto: Usuario: 1 Consulto Areas
+20190808 11:18:59 Excepcion: DatosDiagramaER.DiagramaERConsultaThere is already an open DataReader associated with this Command which must be closed first.
+20190808 11:19:03 Excepcion: DatosDiagramaER.DiagramaERConsultaThe connection was not closed. The connection's current state is open.
+20190808 11:46:46 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 11:47:24 Correcto: Usuario: 1 Consulto Areas
+20190808 11:52:37 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 11:52:43 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 11:52:43 Correcto: Usuario: 1 Consulto Areas
+20190808 11:52:43 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 11:52:43 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:20:24 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 12:20:43 Correcto: Usuario: 1 Consulto Areas
+20190808 12:20:43 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:20:43 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:21:36 Correcto: Usuario: 1 Consulto Areas
+20190808 12:21:36 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:21:36 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:21:36 Correcto: Usuario: 1 Consulto Areas
+20190808 12:21:36 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:21:37 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:21:37 Correcto: Usuario: 1 Consulto Areas
+20190808 12:21:37 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:21:37 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:21:37 Correcto: Usuario: 1 Consulto Areas
+20190808 12:21:37 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:21:37 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:21:38 Correcto: Usuario: 1 Consulto Areas
+20190808 12:21:38 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:21:38 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:28:13 Correcto: Usuario: 1 Consulto Areas
+20190808 12:28:13 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 12:28:13 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 12:28:30 Correcto: Usuario: 1 Consulto Areas
+20190808 12:28:30 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 12:28:30 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 12:28:38 Correcto: Usuario: 1 Consulto Areas
+20190808 12:28:38 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:28:38 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:34:15 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 12:35:43 Correcto: Usuario: 1 Consulto Areas
+20190808 12:35:43 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:35:43 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:37:19 Correcto: Usuario: 1 Consulto Areas
+20190808 12:37:19 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:37:19 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:37:53 Correcto: Usuario: 1 Consulto Areas
+20190808 12:37:53 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:37:53 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:38:59 Correcto: Usuario: 1 Consulto Areas
+20190808 12:38:59 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 12:38:59 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 12:46:27 Correcto: Usuario: 1 Consulto Areas
+20190808 12:46:27 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 12:46:27 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 12:46:41 Correcto: Usuario: 1 Consulto Areas
+20190808 12:46:42 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:46:42 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:54:47 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 12:54:56 Correcto: Usuario: 1 Consulto Areas
+20190808 12:54:56 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:54:56 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:59:08 Correcto: Usuario: 1 Consulto Areas
+20190808 12:59:09 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 12:59:09 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:01:35 Correcto: Usuario: 1 Consulto Areas
+20190808 13:01:35 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:01:35 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:02:22 Correcto: Usuario: 1 Consulto Areas
+20190808 13:02:22 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:02:22 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:03:00 Correcto: Usuario: 1 Consulto Areas
+20190808 13:03:00 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:03:00 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:04:38 Correcto: Usuario: 1 Consulto Areas
+20190808 13:04:38 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:04:38 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:05:29 Correcto: Usuario: 1 Consulto Areas
+20190808 13:05:29 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:05:29 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:06:54 Correcto: Usuario: 1 Consulto Areas
+20190808 13:06:54 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:06:54 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:10:34 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 13:10:41 Correcto: Usuario: 1 Consulto Areas
+20190808 13:10:41 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:10:41 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:14:42 Correcto: Usuario: 1 Consulto Areas
+20190808 13:14:42 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:14:42 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:17:30 Correcto: Usuario: 1 Consulto Areas
+20190808 13:17:30 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:17:30 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:19:17 Correcto: Usuario: 1 Consulto Areas
+20190808 13:19:17 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:19:17 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:20:13 Correcto: Usuario: 1 Consulto Areas
+20190808 13:20:14 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:20:14 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:20:58 Correcto: Usuario: 1 Consulto Areas
+20190808 13:20:58 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:20:58 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:28:51 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 13:29:24 Correcto: Usuario: 1 Consulto Areas
+20190808 13:29:24 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:29:24 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:30:02 Correcto: Usuario: 1 Consulto Areas
+20190808 13:30:02 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:30:02 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:33:52 Correcto: Usuario: 1 Consulto Areas
+20190808 13:33:52 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:33:52 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:36:36 Correcto: Usuario: 1 Consulto Areas
+20190808 13:36:36 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:36:37 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:37:16 Correcto: Usuario: 1 Consulto Areas
+20190808 13:37:16 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:37:16 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:41:15 Correcto: Usuario: 1 Consulto Areas
+20190808 13:41:15 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:41:15 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:41:53 Correcto: Usuario: 1 Consulto Areas
+20190808 13:41:53 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:41:53 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:49:18 Correcto: Usuario: 1 Consulto Areas
+20190808 13:49:18 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:49:18 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 13:50:57 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 13:51:02 Correcto: Usuario: 1 Consulto Areas
+20190808 13:51:02 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:51:02 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:52:02 Correcto: Usuario: 1 Consulto Areas
+20190808 13:52:02 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 13:52:02 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 14:01:31 Correcto: Usuario: 1 Consulto Areas
+20190808 14:01:31 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 14:01:31 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 14:01:53 Correcto: Usuario: 1 Consulto Areas
+20190808 14:01:53 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 14:01:53 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 14:03:02 Correcto: Usuario: 1 Consulto Areas
+20190808 14:03:02 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 14:03:02 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 14:04:09 Correcto: Usuario: 1 Consulto Areas
+20190808 14:04:09 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 14:04:09 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 14:05:01 Correcto: Usuario: 1 Consulto Areas
+20190808 14:05:01 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 14:05:01 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 16:44:52 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 16:45:15 Correcto: Usuario: 1 Consulto Areas
+20190808 16:45:15 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 16:45:15 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 16:47:37 Correcto: Usuario: 1 Consulto Areas
+20190808 16:47:37 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 16:47:37 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:01:30 Correcto: Usuario: 1 Consulto Areas
+20190808 17:01:30 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:01:30 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:02:56 Correcto: Usuario: 1 Consulto Areas
+20190808 17:02:56 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:02:56 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:04:05 Correcto: Usuario: 1 Consulto Areas
+20190808 17:04:05 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:04:05 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:07:52 Correcto: Usuario: 1 Consulto Areas
+20190808 17:07:53 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:07:53 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:08:09 Correcto: Usuario: 1 Consulto Areas
+20190808 17:08:09 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:08:09 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:09:48 Correcto: Usuario: 1 Consulto Areas
+20190808 17:09:49 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:09:49 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:13:01 Correcto: Usuario: 1 Consulto Areas
+20190808 17:13:01 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:13:01 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:13:52 Correcto: Usuario: 1 Consulto Areas
+20190808 17:13:52 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:13:52 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:18:08 Correcto: Usuario: 1 Consulto Areas
+20190808 17:18:09 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:18:09 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:18:16 Correcto: Usuario: 1 Consulto Areas
+20190808 17:18:16 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:18:16 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:20:04 Correcto: Usuario: 1 Consulto Areas
+20190808 17:20:04 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:20:04 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:21:47 Correcto: Usuario: 1 Consulto Areas
+20190808 17:21:47 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:21:47 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:23:53 Correcto: Usuario: 1 Consulto Areas
+20190808 17:23:53 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:23:53 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:26:14 Correcto: Usuario: 1 Consulto Areas
+20190808 17:26:14 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:26:14 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:33:01 Correcto: Usuario: 1 Consulto Areas
+20190808 17:33:01 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:33:01 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:34:12 Correcto: Usuario: 1 Consulto Areas
+20190808 17:34:12 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:34:12 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:36:14 Correcto: Usuario: 1 Consulto Areas
+20190808 17:36:14 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:36:14 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:39:14 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 17:39:19 Correcto: Usuario: 1 Consulto Areas
+20190808 17:39:19 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 17:39:19 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 17:39:25 Correcto: Usuario: 1 Consulto Areas
+20190808 17:39:25 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 17:39:25 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 17:40:06 Correcto: Usuario: 1 Consulto Areas
+20190808 17:40:06 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:40:06 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:42:54 Correcto: Usuario: 1 Consulto Areas
+20190808 17:42:54 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:42:54 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:44:23 Correcto: Usuario: 1 Consulto Areas
+20190808 17:44:23 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:44:23 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:45:19 Correcto: Usuario: 1 Consulto Areas
+20190808 17:45:19 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:45:20 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:45:42 Correcto: Usuario: 1 Consulto Areas
+20190808 17:45:42 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:45:42 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:47:17 Correcto: Usuario: 1 Consulto Areas
+20190808 17:47:17 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:47:17 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:48:52 Correcto: Usuario: 1 Consulto Areas
+20190808 17:48:52 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:48:52 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:50:18 Correcto: Usuario: 1 Consulto Areas
+20190808 17:50:19 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:50:19 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:53:04 Correcto: Usuario: 1 Consulto Areas
+20190808 17:53:04 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 17:53:04 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:00:28 Correcto: Usuario: 1 Consulto Areas
+20190808 18:00:28 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:00:28 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:03:43 Correcto: Usuario: 1 Consulto Areas
+20190808 18:03:43 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:03:43 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:07:01 Correcto: Usuario: 1 Consulto Areas
+20190808 18:07:01 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:07:01 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:08:52 Correcto: Usuario: 1 Consulto Areas
+20190808 18:08:52 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:08:52 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:17:02 Correcto: Usuario: 1 Consulto Areas
+20190808 18:17:02 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:17:02 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:17:14 Correcto: Usuario: 1 Consulto Areas
+20190808 18:17:14 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:17:14 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:18:19 Correcto: Usuario: 1 Consulto Aplicaciones
+20190808 18:18:27 Correcto: Usuario: 1 Consulto Areas
+20190808 18:18:27 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 18:18:27 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 18:18:51 Correcto: Usuario: 1 Consulto Areas
+20190808 18:18:51 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 18:18:51 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 18:19:51 Correcto: Usuario: 1 Consulto Areas
+20190808 18:19:51 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:19:51 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:20:41 Correcto: Usuario: 1 Consulto Areas
+20190808 18:20:41 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:20:41 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:22:00 Correcto: Usuario: 1 Consulto Areas
+20190808 18:22:00 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:22:00 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:25:36 Correcto: Usuario: 1 Consulto Areas
+20190808 18:25:36 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:25:36 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:26:29 Correcto: Usuario: 1 Consulto Areas
+20190808 18:26:29 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:26:29 Correcto: Usuario: 1 Consulto Diagrama ER
+20190808 18:27:26 Correcto: Usuario: 1 Consulto Areas
+20190808 18:27:26 Error: Usuario: 1 No Consulto Diagrama ER
+20190808 18:27:26 Error: Usuario: 1 No Consulto Diagrama ER

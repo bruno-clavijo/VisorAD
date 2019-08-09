@@ -1,0 +1,343 @@
+﻿@model HerramientaAD.Models.TableroInicialModel
+@using System.Collections.Generic
+
+@{
+    ViewBag.Title = "Inicial";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    foreach (System.Xml.XmlNode xmlNode in Model.ResultadoXML.DocumentElement.SelectSingleNode("Aplicaciones").SelectNodes("row"))
+    {
+        <div class="jumbotron">
+            <h1 class="display-3">@xmlNode.Attributes["Aplicacion"].Value.ToString()</h1>
+            <p class="lead">@xmlNode.Attributes["AplicacionDescripcion"].Value.ToString()</p>
+            <hr class="my-4">
+        </div>
+        <br />
+        <table class="table table-borderless">
+            <thead>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td width="25%">
+                        <div class="card border-primary mb-3" style="width: auto;">
+                            <div class="card-header">Área</div>
+                            <div class="card-body">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td width="80%">
+                                            <p class="card-text">@xmlNode.Attributes["Area"].Value.ToString()</p>
+                                        </td>
+                                        <td>
+                                            <img width="50" height="50" src="@Url.Content(xmlNode.Attributes["AreaImagen"].Value.ToString())" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <td width="25%">
+                        <div class="card border-primary mb-3" style="width: auto;">
+                            <div class="card-header">Proceso</div>
+                            <div class="card-body">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td width="80%">
+                                            <p class="card-text">@xmlNode.Attributes["Proceso"].Value.ToString()</p>
+                                        </td>
+                                        <td>
+                                            <img width="50" height="50" src="@Url.Content(xmlNode.Attributes["ProcesoImagen"].Value.ToString())" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <td width="25%">
+                        <div class="card border-primary mb-3" style="width: auto;">
+                            <div class="card-header">Criticidad</div>
+                            <div class="card-body">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td width="80%">
+                                            <p class="card-text">@xmlNode.Attributes["Criticidad"].Value.ToString()</p>
+                                        </td>
+                                        <td>
+                                            <img width="50" height="50" src="@Url.Content(xmlNode.Attributes["CriticidadImagen"].Value.ToString())" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <td width="25%">
+                        <div class="card border-primary mb-3" style="width: auto;">
+                            <div class="card-header">Usuarios</div>
+                            <div class="card-body">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td width="80%">
+                                            <p class="card-text">@xmlNode.Attributes["Usuarios"].Value.ToString()</p>
+                                        </td>
+                                        <td>
+                                            <img width="50" height="50" src="@Url.Content(xmlNode.Attributes["UsuariosImagen"].Value.ToString())" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    }
+}
+
+<table class="table table-borderless">
+    <thead>
+    </thead>
+    <tbody>
+        @{
+            foreach (System.Xml.XmlNode xmlNode in Model.ResultadoXML.DocumentElement.SelectSingleNode("Aplicaciones").SelectNodes("row"))
+            {
+                <tr>
+                    <td colspan="2" width="50%" height="100%">
+                        <div class="card border-primary mb-3" style="width: auto; height: 11rem">
+                            <div class="card-header">Sistema Operativo</div>
+                            <div class="card-body">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td width="80%">
+                                            <p class="card-text">@xmlNode.Attributes["SistemaOperativo"].Value.ToString()</p>
+                                        </td>
+                                        <td>
+                                            <img width="50" height="50" src="@Url.Content(xmlNode.Attributes["ImagenSO"].Value.ToString())" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <td width="25%">
+                        <div class="card border-primary mb-3" style="width: auto; height: 11rem">
+                            <div class="card-header">Modelo y Memoria del Servidor</div>
+                            <div class="card-body">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td width="80%">
+                                            <p class="card-text">@xmlNode.Attributes["Modelo"].Value.ToString()</p>
+                                            <p class="card-text">@xmlNode.Attributes["Memoria"].Value.ToString()</p>
+                                        </td>
+                                        <td>
+                                            <img width="50" height="50" src="@Url.Content(xmlNode.Attributes["ImagenMR"].Value.ToString())" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <td width="25%">
+                        <div class="card border-primary mb-3" style="width: auto; height: 11rem">
+                            <div class="card-header">Acceso</div>
+                            <div class="card-body">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td width="80%">
+                                            <p class="card-text">@xmlNode.Attributes["Acceso"].Value.ToString()</p>
+                                        </td>
+                                        <td>
+                                            <img width="50" height="50" src="@Url.Content(xmlNode.Attributes["ImagenAC"].Value.ToString())" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<table class="table table-borderless">
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <td width="33%">
+                <div class="card border-primary mb-3" style="width: auto; height: 19rem">
+                    <div class="card-header">Lenguajes</div>
+                    <div class="card-body">
+                        <table class="table table-borderless" height="100">
+                            @{
+                                foreach (System.Xml.XmlNode xmlNode in Model.DatosExtraXML.DocumentElement.SelectSingleNode("AplicacionesDatosExtra").SelectNodes("row"))
+                                {
+                                    if (@xmlNode.Attributes["Tipo"].Value.ToString() == "Lenguajes")
+                                    {
+                                        <tr>
+                                            <td width="80%">
+                                                <p class="card-text">@xmlNode.Attributes["Descripcion"].Value.ToString()</p>
+                                            </td>
+                                            <td>
+                                                <img width="30" height="30" src="@Url.Content(xmlNode.Attributes["Imagen"].Value.ToString())" />
+                                            </td>
+                                        </tr>
+
+
+                                    }
+                                }
+                            }
+
+                        </table>
+                    </div>
+                </div>
+            </td>
+            <td width="33%">
+                <div class="card border-primary mb-3" style="width: auto; height: 19rem">
+                    <div class="card-header">Bases de Datos</div>
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td width="80%">
+                                    @{
+                                        foreach (System.Xml.XmlNode xmlNode in Model.DatosExtraXML.DocumentElement.SelectSingleNode("AplicacionesDatosExtra").SelectNodes("row"))
+                                        {
+                                            if (@xmlNode.Attributes["Tipo"].Value.ToString() == "BaseDeDatos")
+                                            {
+                                                <p class="card-text">@xmlNode.Attributes["Descripcion"].Value.ToString()</p>
+                                            }
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @{
+                                        foreach (System.Xml.XmlNode xmlNode in Model.DatosExtraXML.DocumentElement.SelectSingleNode("AplicacionesDatosExtra").SelectNodes("row"))
+                                        {
+                                            if (@xmlNode.Attributes["Tipo"].Value.ToString() == "BaseDeDatos")
+                                            {
+                                                <img width="50" height="50" src="@Url.Content(xmlNode.Attributes["Imagen"].Value.ToString())" />
+                                                break;
+                                            }
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+            <td width="33%">
+                <div class="card border-primary mb-3" style="width: auto; height: 19rem">
+                    <div class="card-header">Servidor Web</div>
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td width="80%">
+                                    @{
+                                        foreach (System.Xml.XmlNode xmlNode in Model.DatosExtraXML.DocumentElement.SelectSingleNode("AplicacionesDatosExtra").SelectNodes("row"))
+                                        {
+                                            if (@xmlNode.Attributes["Tipo"].Value.ToString() == "ServidorWeb")
+                                            {
+                                                <p class="card-text">@xmlNode.Attributes["Descripcion"].Value.ToString()</p>
+                                            }
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @{
+                                        foreach (System.Xml.XmlNode xmlNode in Model.DatosExtraXML.DocumentElement.SelectSingleNode("AplicacionesDatosExtra").SelectNodes("row"))
+                                        {
+                                            if (@xmlNode.Attributes["Tipo"].Value.ToString() == "ServidorWeb")
+                                            {
+                                                <img width="50" height="50" src="@Url.Content(xmlNode.Attributes["Imagen"].Value.ToString())" />
+                                                break;
+                                            }
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table class="table table-borderless">
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <td width="50%">
+                <div class="card border-primary mb-3" style="width: auto; height: 16rem">
+                    <div class="card-header">Servidores de Aplicaciones</div>
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td width="80%">
+                                    @{
+                                        foreach (System.Xml.XmlNode xmlNode in Model.DatosExtraXML.DocumentElement.SelectSingleNode("AplicacionesDatosExtra").SelectNodes("row"))
+                                        {
+                                            if (@xmlNode.Attributes["Tipo"].Value.ToString() == "ServidorApp")
+                                            {
+                                                <p class="card-text">@xmlNode.Attributes["Descripcion"].Value.ToString()</p>
+                                            }
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @{
+                                        foreach (System.Xml.XmlNode xmlNode in Model.DatosExtraXML.DocumentElement.SelectSingleNode("AplicacionesDatosExtra").SelectNodes("row"))
+                                        {
+                                            if (@xmlNode.Attributes["Tipo"].Value.ToString() == "ServidorApp")
+                                            {
+                                                <img width="50" height="50" src="@Url.Content(xmlNode.Attributes["Imagen"].Value.ToString())" />
+                                                break;
+                                            }
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+            <td width="50%">
+                <div class="card border-primary mb-3" style="width: auto; height: 16rem">
+                    <div class="card-header">Servidores de Bases de Datos</div>
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td width="80%">
+                                    @{
+                                        foreach (System.Xml.XmlNode xmlNode in Model.DatosExtraXML.DocumentElement.SelectSingleNode("AplicacionesDatosExtra").SelectNodes("row"))
+                                        {
+                                            if (@xmlNode.Attributes["Tipo"].Value.ToString() == "ServidorBD")
+                                            {
+                                                <p class="card-text">@xmlNode.Attributes["Descripcion"].Value.ToString()</p>
+                                            }
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @{
+                                        foreach (System.Xml.XmlNode xmlNode in Model.DatosExtraXML.DocumentElement.SelectSingleNode("AplicacionesDatosExtra").SelectNodes("row"))
+                                        {
+                                            if (@xmlNode.Attributes["Tipo"].Value.ToString() == "ServidorBD")
+                                            {
+                                                <img width="50" height="50" src="~/Images/servidor-bd.png" />
+                                                break;
+                                            }
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

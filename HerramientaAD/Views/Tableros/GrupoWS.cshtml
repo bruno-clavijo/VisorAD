@@ -1,0 +1,309 @@
+﻿@model HerramientaAD.Models.GrupoWSModel
+
+@{
+    ViewBag.Title = "GrupoWS";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script>
+        window.onload = function () {
+
+            var Datos = [];
+
+            @{
+                foreach (HerramientaAD.com.Utilerias.ElementosDeGrupo.GraficaPie grafica in Model.Archivos)
+                {
+                    @:Datos.push({ y: @grafica.Porcentaje, name: "@grafica.Nombre" });
+                }
+            }
+
+
+            var chart = new CanvasJS.Chart("graficaArchivos", {
+                exportEnabled: true,
+                animationEnabled: true,
+                title: {
+                    text: "Archivos Analizados"
+                },
+                legend: {
+                    cursor: "pointer",
+                    itemclick: explodePie
+                },
+                data: [{
+                    type: "pie",
+                    showInLegend: true,
+                    toolTipContent: "{name}: <strong>{y}%</strong>",
+                    indexLabel: "{name} - {y}%",
+                    dataPoints: Datos
+                }]
+            });
+
+
+            chart.render();
+            Datos = [];
+
+            @{
+                foreach (HerramientaAD.com.Utilerias.ElementosDeGrupo.GraficaBarra grafica in Model.MasUsados)
+                {
+                    @:Datos.push({ y: @grafica.EjeY, label: "@grafica.Etiqueta" });
+                }
+            }
+
+
+            var chart = new CanvasJS.Chart("graficaMasUsados", {
+	            animationEnabled: true,
+                exportEnabled: true,
+
+	            title:{
+		            text:"Elementos más Utilizados en Código"
+	            },
+	            axisX:{
+		            interval: 1
+	            },
+	            axisY2:{
+		            interlacedColor: "rgba(1,77,101,.2)",
+		            gridColor: "rgba(1,77,101,.1)",
+		            title: "Objetos de Base de Datos"
+	            },
+	            data: [{
+                    type: "bar",
+		            name: "objetos",
+		            axisYType: "secondary",
+		            color: "#014D65",
+		            dataPoints: Datos
+
+	            }]
+            });
+            chart.render();
+            Datos = [];
+
+            @{
+                foreach (HerramientaAD.com.Utilerias.ElementosDeGrupo.GraficaPie grafica in Model.Middleware)
+                {
+                    @:Datos.push({ y: @grafica.Porcentaje, name: "@grafica.Nombre" });
+                }
+            }
+
+
+            var chart = new CanvasJS.Chart("graficaMiddleware", {
+                exportEnabled: true,
+                animationEnabled: true,
+                title: {
+                    text: "Middleware's Encontrados"
+                },
+                legend: {
+                    cursor: "pointer",
+                    itemclick: explodePie
+                },
+                data: [{
+                    type: "pie",
+                    showInLegend: true,
+                    toolTipContent: "{name}: <strong>{y}%</strong>",
+                    indexLabel: "{name} - {y}%",
+                    dataPoints: Datos
+                }]
+            });
+
+
+            chart.render();
+            Datos = [];
+        }
+
+        function explodePie(e) {
+            if (typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+                e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+            } else {
+                e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+            }
+            e.chart.render();
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1 class="display-3">SICOFIN</h1>
+        <p class="lead">Resultados del Análisis de Servicios e Interfases</p>
+        <hr class="my-4">
+    </div>
+
+
+
+    <table class="table-indicator" align="center">
+        <tr>
+            <td>
+                <div class="card border-primary mb-3" style="max-width: 20rem; height: 10rem">
+                    <div class="card-header">@Model.Indicadores.ElementAt(0).Nombre</div>
+                    <div class="card-body">
+                        <table class="table-indicator">
+                            <tr>
+                                <td rowspan="2">
+                                    <div class="contenedor">
+                                        <div class="box">
+                                            <img width="70" height="70" src="~/Images/interfaz.png" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" rowspan="2">
+                                    <div class="vl-blanco"></div>
+                                </td>
+                                <td>
+                                    <p class="card-text">En Uso</p>
+                                    <h1 class="card-title">@Model.Indicadores.ElementAt(0).Usados</h1>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <div class="card border-primary mb-3" style="max-width: 20rem; height: 10rem">
+                    <div class="card-header">@Model.Indicadores.ElementAt(1).Nombre</div>
+                    <div class="card-body">
+                        <table class="table-indicator">
+                            <tr>
+                                <td rowspan="2">
+                                    <div class="contenedor">
+                                        <div class="box">
+                                            <img width="70" height="70" src="~/Images/proceso.png" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" rowspan="2">
+                                    <div class="vl-blanco"></div>
+                                </td>
+                                <td>
+                                    <p class="card-text">En Uso</p>
+                                    <h1 class="card-title">@Model.Indicadores.ElementAt(1).Usados</h1>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <div class="card border-primary mb-3" style="max-width: 20rem; height: 10rem">
+                    <div class="card-header">@Model.Indicadores.ElementAt(2).Nombre</div>
+                    <div class="card-body">
+                        <table class="table-indicator">
+                            <tr>
+                                <td rowspan="2">
+                                    <div class="contenedor">
+                                        <div class="box">
+                                            <img width="70" height="70" src="~/Images/middleware.png" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" rowspan="2">
+                                    <div class="vl-blanco"></div>
+                                </td>
+                                <td>
+                                    <p class="card-text">En Uso</p>
+                                    <h1 class="card-title">@Model.Indicadores.ElementAt(2).Usados</h1>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <div class="card border-primary mb-3" style="max-width: 20rem; height: 10rem">
+                    <div class="card-header">@Model.Indicadores.ElementAt(3).Nombre</div>
+                    <div class="card-body">
+                        <table class="table-indicator">
+                            <tr>
+                                <td rowspan="2">
+                                    <div class="contenedor">
+                                        <div class="box">
+                                            <img width="70" height="70" src="~/Images/enlace.png" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" rowspan="2">
+                                    <div class="vl-blanco"></div>
+                                </td>
+                                <td>
+                                    <p class="card-text">En Uso</p>
+                                    <h1 class="card-title">@Model.Indicadores.ElementAt(3).Usados</h1>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="card border-primary mb-3" style="max-width: 20rem; height: 10rem">
+                    <div class="card-header">@Model.Indicadores.ElementAt(4).Nombre</div>
+                    <div class="card-body">
+                        <table class="table-indicator">
+                            <tr>
+                                <td rowspan="2">
+                                    <div class="contenedor">
+                                        <div class="box">
+                                            <img width="70" height="70" src="~/Images/internet.png" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" rowspan="2">
+                                    <div class="vl-blanco"></div>
+                                </td>
+                                <td>
+                                    <p class="card-text">En Uso</p>
+                                    <h1 class="card-title">@Model.Indicadores.ElementAt(4).Usados</h1>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <div class="card border-primary mb-3" style="max-width: 20rem; height: 10rem">
+
+                </div>
+            </td>
+
+            <td>
+                <div class="card border-primary mb-3" style="max-width: 20rem; height: 10rem">
+
+                </div>
+            </td>
+
+            <td>
+                <div class="card border-primary mb-3" style="max-width: 20rem; height: 10rem">
+
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+    <div id="graficaArchivos" style="height: 370px; width: 100%;"></div>
+    <br />
+    <br />
+    <div id="graficaMasUsados" style="height: 370px; width: 100%;"></div>
+    <br />
+    <br />
+    <div id="graficaMiddleware" style="height: 370px; width: 100%;"></div>
+
+
+    <script src="~/Scripts/canvasjs.min.js"></script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,54 @@
+﻿@model HerramientaAD.Models.TableroGeneralModel
+
+@{
+    ViewBag.Title = "General";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <h1 class="display-3">Tablero General</h1>
+    <p class="lead">Aplicaciones analizadas</p>
+    <hr class="my-4">
+</div>
+<br />
+<table class="table table-bordered">
+    <thead>
+    </thead>
+    <tbody>
+        @{
+            foreach (System.Xml.XmlNode xmlNode in Model.ResultadoXML.DocumentElement.SelectSingleNode("Aplicaciones").SelectNodes("row"))
+            {
+                <tr>
+                    <td>
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td width="35%">@xmlNode.Attributes["AplicacionDescripcion"].Value.ToString()</td>
+                                    <td width="15%">@Html.ActionLink(xmlNode.Attributes["Aplicacion"].Value.ToString(), "Inicial", "Tableros", 
+                                                   new { AplicacionID = xmlNode.Attributes["AplicacionID"].Value }, null)</td>
+                                    <td><strong>Criticidad:</strong> </td>
+                                    <td>@xmlNode.Attributes["Criticidad"].Value.ToString()</td>
+                                    <td><img width="20" height="20" src="@Url.Content(xmlNode.Attributes["CriticidadImagen"].Value.ToString())" /></td>
+                                    <td><strong>Proceso:</strong></td>
+                                    <td>@xmlNode.Attributes["Proceso"].Value.ToString()</td>
+                                    <td><img width="20" height="20" src="@Url.Content(xmlNode.Attributes["ProcesoImagen"].Value.ToString())" /></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Última Actualización: </strong>@xmlNode.Attributes["UltimaActualizacion"].Value.ToString()</td>
+                                    <td></td>
+                                    <td><strong>Lenguaje: </strong></td>
+                                    <td>@xmlNode.Attributes["Lenguaje"].Value.ToString()</td>
+                                    <td><img width="20" height="20" src="@Url.Content(xmlNode.Attributes["LenguajeImagen"].Value.ToString())" /></td>
+                                    <td><strong>Estatus: </strong></td>
+                                    <td>@xmlNode.Attributes["Estatus"].Value.ToString()</td>
+                                    <td><img width="20" height="20" src="@Url.Content(xmlNode.Attributes["EstatusImagen"].Value.ToString())" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

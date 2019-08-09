@@ -1,0 +1,302 @@
+﻿@model HerramientaAD.Models.DetalleTecnicoModel
+
+@{
+    ViewBag.Title = "Detalle Técnico";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+</head>
+<body>
+    <style>
+        th, td {
+            padding: 10px;
+        }
+    </style>
+
+    <div class="jumbotron">
+        <h1 class="display-3">Detalle Técnico</h1>
+        <p class="lead">Ficha de resultados del Análisis</p>
+        <hr class="my-4">
+    </div>
+
+    <form>
+        <fieldset>
+            <legend>Filtros</legend>
+            <table align="center">
+                <tr style="height: 50px">
+                    <td width="370px" align="center">
+                        <button type="button" class="btn btn-primary" style="width:300px" id="btnFiltrosBD">Objetos de Base de Datos</button>
+                    </td>
+                    <td width="370px" align="center">
+                        <button type="button" class="btn btn-primary" style="width:300px" id="btnFiltrosWS">Objetos de Interfases y Servicios</button>
+                    </td>
+                    <td width="370px" align="center">
+                        <button type="button" class="btn btn-primary" style="width:300px" id="btnFiltrosCM">Objetos de Clases y Métodos</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.AreaID, "Area:")
+                            @Html.DropDownListFor(m => m.AreasLista, new SelectList(Model.AreasLista, "Indice", "Texto"), "Selecciona", new { @class = "form-control" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.AplicacionID, "Aplicación:")
+                            @Html.DropDownListFor(m => m.AplicacionesLista, new SelectList(Model.AplicacionesLista, "Indice", "Texto"), "Selecciona", new { @class = "form-control" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label for="checking" , id="Filtro1">Base de Datos:</label>
+                            @Html.DropDownListFor(m => m.Filtro1Lista, new SelectList(Model.Filtro1Lista, "Indice", "Texto"), "Selecciona", new { @class = "form-control" })
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="checking" , id="Filtro2">Objeto de Base de Datos:</label>
+                            @Html.DropDownListFor(m => m.Filtro2Lista, new SelectList(Model.Filtro2Lista, "Indice", "Texto"), "Selecciona", new { @class = "form-control" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label for="checking" , id="Filtro3">Archivo:</label>
+                            @Html.DropDownListFor(m => m.Filtro3Lista, new SelectList(Model.Filtro3Lista, "Indice", "Texto"), "Selecciona", new { @class = "form-control" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label for="checking" , id="Filtro4">Línea de Código:</label>
+                            @Html.DropDownListFor(m => m.Filtro4Lista, new SelectList(Model.Filtro4Lista, "Indice", "Texto"), "Selecciona", new { @class = "form-control" })
+                        </div>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td width="370px" align="center">
+                        <button type="button" class="btn btn-primary" style="width:300px" id="btnBuscar">Buscar</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+    <div id="divdet" style="width:100%;">
+        @{
+            Html.RenderPartial("Detalle");
+        }
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+
+    var tpfil = "BD";
+    var tipo;
+
+    function limpiarfiltros() {
+        $("#AreasLista").empty;
+        $("#AreasLista")[0].selectedIndex = 0;
+        $("#AplicacionesLista").empty;
+        $("#AplicacionesLista")[0].selectedIndex = 0;
+        $("#Filtro1Lista").empty;
+        $("#Filtro1Lista")[0].selectedIndex = 0;
+        $("#Filtro2Lista").empty;
+        $("#Filtro2Lista")[0].selectedIndex = 0;
+        $("#Filtro3Lista").empty;
+        $("#Filtro3Lista")[0].selectedIndex = 0;
+        $("#Filtro4Lista").empty;
+        $("#Filtro4Lista")[0].selectedIndex = 0;
+    }
+
+    function ActualizaBusqueda(tpfil, idapp, fil1, fil2, fil3, fil4) {
+        $.ajax({
+            type: "POST",
+            url: "/DetalleTecnico/ActualizarConsulta",
+            data: { Tipo: tpfil, AplicacionID: idapp, Filtro1: fil1, Filtro2: fil2, Filtro3: fil3, Filtro4: fil4 },
+            success: function (viewHTML) {
+                $("#divdet").empty;
+                $("#divdet").html(viewHTML);
+            },
+            error: function (errorData) { console.log("Request Failed: " + errorData); }
+        });
+    }
+
+    $(document).ready(function() {
+
+        $("#AreasLista").change(function() {
+            var a = $("#AreasLista Option:Selected").val();
+            var url = '@Url.Content("~/")' + "DetalleTecnico/ActualizarAplicaciones";
+            var ddlsource = "#AreasLista Option:Selected";
+            $.getJSON(url, { areaid: $(ddlsource).val() }, function (data) {
+                var items = '';
+                $("#AplicacionesLista").empty;
+                $.each(data, function (i, row) {
+                    items += "<option value='" + row.Value + "'>" + row.Text + "</option>";
+                });
+                $("#AplicacionesLista").html(items);
+            }).fail(function (jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.log("Request Failed: " + err);
+            });
+        });
+
+        $("#AplicacionesLista").change(function () {
+            var app = $("#AplicacionesLista Option:Selected").val();
+            var fil1 = "";
+            var fil2 = "";
+            var fil3 = "";
+            if (tpfil == "BD") tipo = "BaseDatos";
+            if (tpfil == "WS") tipo = "Tipohijo";
+            if (tpfil == "CM") tipo = "Tipohijo";
+            var url = '@Url.Content("~/")' + "DetalleTecnico/ActualizarFiltros";
+            $.getJSON(url, { Filtro: tpfil, Tipo: tipo, AplicacionID: app, Filtro1: fil1,
+                Filtro2: fil2, Filtro3: fil3 }, function (data) {
+                var items = '';
+                $("#Filtro1Lista").empty;
+                $.each(data, function (i, row) {
+                    items += "<option value='" + row.Value + "'>" + row.Text + "</option>";
+                });
+                $("#Filtro1Lista").html(items);
+            }).fail(function (jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.log("Request Failed: " + err);
+            });
+        });
+
+        $("#Filtro1Lista").change(function () {
+            var app = $("#AplicacionesLista Option:Selected").val();
+            var fil1 = $("#Filtro1Lista Option:Selected").val();
+            var fil2 = "";
+            var fil3 = "";
+            if (tpfil == "BD") tipo = "ObjetosBD";
+            if (tpfil == "WS") tipo = "Middleware";
+            if (tpfil == "CM") tipo = "Archivo";
+            var url = '@Url.Content("~/")' + "DetalleTecnico/ActualizarFiltros";
+            $.getJSON(url, { Filtro: tpfil, Tipo: tipo, AplicacionID: app, Filtro1: fil1,
+                Filtro2: fil2, Filtro3: fil3 }, function (data) {
+                var items = '';
+                $("#Filtro2Lista").empty;
+                $.each(data, function (i, row) {
+                    items += "<option value='" + row.Value + "'>" + row.Text + "</option>";
+                });
+                $("#Filtro2Lista").html(items);
+            }).fail(function (jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.log("Request Failed: " + err);
+            });
+        });
+        $("#Filtro2Lista").change(function () {
+            var app = $("#AplicacionesLista Option:Selected").val();
+            var fil1 = $("#Filtro1Lista Option:Selected").val();
+            var fil2 = $("#Filtro2Lista Option:Selected").val();
+            var fil3 = "";
+            if (tpfil == "BD") tipo = "Archivo";
+            if (tpfil == "WS") tipo = "URL";
+            if (tpfil == "CM") tipo = "Lenguajeapp";
+            var url = '@Url.Content("~/")' + "DetalleTecnico/ActualizarFiltros";
+            $.getJSON(url, { Filtro: tpfil, Tipo: tipo, AplicacionID: app, Filtro1: fil1,
+                Filtro2: fil2, Filtro3: fil3 }, function (data) {
+                var items = '';
+                $("#Filtro3Lista").empty;
+                $.each(data, function (i, row) {
+                    items += "<option value='" + row.Value + "'>" + row.Text + "</option>";
+                });
+                $("#Filtro3Lista").html(items);
+            }).fail(function (jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.log("Request Failed: " + err);
+            });
+        });
+        $("#Filtro3Lista").change(function () {
+            var app = $("#AplicacionesLista Option:Selected").val();
+            var fil1 = $("#Filtro1Lista Option:Selected").val();
+            var fil2 = $("#Filtro2Lista Option:Selected").val();
+            var fil3 = $("#Filtro3Lista Option:Selected").val();
+            if (tpfil == "BD") tipo = "NumeroLinea";
+            if (tpfil == "WS") tipo = "Archivo";
+            if (tpfil == "CM") tipo = "NumeroLinea";
+            var url = '@Url.Content("~/")' + "DetalleTecnico/ActualizarFiltros";
+            $.getJSON(url, { Filtro: tpfil, Tipo: tipo, AplicacionID: app, Filtro1: fil1,
+                Filtro2: fil2, Filtro3: fil3 }, function (data) {
+                var items = '';
+                $("#Filtro4Lista").empty; 
+                $.each(data, function (i, row) {
+                    items += "<option value='" + row.Value + "'>" + row.Text + "</option>";
+                });
+                $("#Filtro4Lista").html(items);
+            }).fail(function (jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.log("Request Failed: " + err);
+            });
+        });
+
+        $('#btnFiltrosBD').click(function () {
+            tpfil = "BD";
+            $("#Filtro1").text("Base de Datos:");
+            $("#Filtro2").text("Objeto de Base de Datos:");
+            $("#Filtro3").text("Archivo:");
+            $("#Filtro4").text("Línea de Código:");
+
+            limpiarfiltros();
+        });
+
+        $('#btnFiltrosWS').click(function () {
+            tpfil = "WS";
+            $("#Filtro1").text("Tipo Servicio:");
+            $("#Filtro2").text("Middleware:");
+            $("#Filtro3").text("URL:");
+            $("#Filtro4").text("Archivo:");
+
+            limpiarfiltros();
+        });
+
+        $('#btnFiltrosCM').click(function () {
+            tpfil = "CM";
+            $("#Filtro1").text("Tipo Objeto:");
+            $("#Filtro2").text("Archivo:");
+            $("#Filtro3").text("Lenguaje:");
+            $("#Filtro4").text("Número de Línea:");
+
+            limpiarfiltros();
+        });
+
+        $('#btnBuscar').click(function () {
+            var idapp = $("#AplicacionesLista Option:Selected").val();
+            if (tpfil == "BD") {
+                var fil1 = $("#Filtro1Lista Option:Selected").val();
+                var fil2 = $("#Filtro2Lista Option:Selected").val();
+                var fil3 = $("#Filtro3Lista Option:Selected").text();
+                var fil4 = $("#Filtro4Lista Option:Selected").text();
+            }
+
+            if (tpfil == "WS") {
+                var fil1 = $("#Filtro1Lista Option:Selected").text();
+                var fil2 = $("#Filtro2Lista Option:Selected").text();
+                var fil3 = $("#Filtro3Lista Option:Selected").text();
+                var fil4 = $("#Filtro4Lista Option:Selected").text();
+            }
+
+            if (tpfil == "CM") {
+                var fil1 = $("#Filtro1Lista Option:Selected").text();
+                var fil2 = $("#Filtro2Lista Option:Selected").text();
+                var fil3 = $("#Filtro3Lista Option:Selected").text();
+                var fil4 = $("#Filtro4Lista Option:Selected").text();
+            }
+
+            ActualizaBusqueda(tpfil,idapp,fil1,fil2,fil3,fil4)
+        });
+    });
+</script>

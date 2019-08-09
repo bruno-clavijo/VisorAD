@@ -1,0 +1,59 @@
+﻿@model HerramientaAD.Models.LoginModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Análisis de Dependencias</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background-color:lightgrey">
+    <br />
+    <br />
+    <br />
+    <table class="table" align="center" border="0" style="height: 100%; width: 50%">
+        <tr>
+            <td width="45%" align="center" rowspan="6">
+                <img src="~/Images/pear.png" />
+            </td>
+            <td width="10%" align="center">
+                <div class="vl-negro"></div>
+            </td>
+            <td width="45%" align="center">
+                <div class="form-group">
+                    <img width="100" height="100" src="~/Images/login.png" />
+                    <br />
+                </div>
+                @using (Html.BeginForm("Ingresar", "Login"))
+                {
+                    <form>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Usuario)
+                            @Html.TextBoxFor(m => m.Usuario, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Usuario)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Contraseña)
+                            @Html.PasswordFor(m => m.Contraseña, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Contraseña)
+                        </div>
+                        <div class="form-group">
+                            <br />
+                            <button style="width:280px" type="submit" class="btn btn-primary" onclick="@("window.location.href='" + @Url.Action("Ingresar", "Login") + "'");">Ingresar</button>
+                        </div>
+                        <div class="form-group">
+                            @ViewBag.Message
+                        </div>
+                    </form>
+                }
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
